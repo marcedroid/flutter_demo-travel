@@ -18,38 +18,49 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.pink,
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hola mundo"),
+          title: Text(
+            "Share",
+            style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.0),
+          ),
+          centerTitle: false,
+          leading: Builder(builder: (BuildContext context){
+            return IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+            );
+          }),
         ),
-        body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
+        body: Center(
+          child: Stack(
             children: <Widget>[
-              Image.network(
-                "https://picsum.photos/500/300/?image=1070",
-                color: Colors.teal,
-                colorBlendMode: BlendMode.multiply,
-              ),
               Container(
-                margin: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                child: Text.rich(
-                  TextSpan(
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia scelerisque efficitur. Proin vitae vehicula lorem. Donec suscipit libero sed tincidunt hendrerit.",
-                    style: TextStyle(
-                        height: 1.3,
-                        color: Colors.black54,
-                        fontSize: 14.5
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage("https://picsum.photos/720/1280/?image=1061"),
+                    fit: BoxFit.fill
+                  )
+                ),
+                child: Center(
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 0, 0, 0.7)
+                    ),
+                    child: Text(
+                      "Flutter",
+                      style: TextStyle(color: Colors.white, fontSize: 32.0, fontWeight: FontWeight.bold, letterSpacing: 1.5),
+                      textAlign: TextAlign.center,
                     ),
                   ),
-                  textAlign: TextAlign.left,
-                  textDirection: TextDirection.ltr,
                 ),
-              ),
+              )
             ],
+          ),
         ),
       ),
     );
