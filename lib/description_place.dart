@@ -1,30 +1,18 @@
 import 'package:flutter/material.dart';
+import 'stars_generator.dart';
 
-class DescriptionPlace extends StatelessWidget{
+class OwcDescriptionPlace extends StatelessWidget{
 
   final String dataName;
   final double dataStars;
   final String dataDescription;
 
-  DescriptionPlace(this.dataName, this.dataStars, this.dataDescription);
+  OwcDescriptionPlace(this.dataName, this.dataStars, this.dataDescription);
 
   @override
   Widget build(BuildContext context) {
 
-    Widget buildStar(int index){
-      return Container(
-        margin: EdgeInsets.only(
-            top: 2.0,
-            right: 3.0
-        ),
-        child: Icon(
-          (index>=dataStars) ? Icons.star_border : (index>dataStars-1 && index<dataStars) ? Icons.star_half : Icons.star,
-          color: Colors.yellow,
-        )
-      );
-    }
-
-    final description = Container(
+    final oweDescription = Container(
       margin: EdgeInsets.only(
         top: 20.0,
         left: 20.0,
@@ -40,7 +28,7 @@ class DescriptionPlace extends StatelessWidget{
       ),
     );
 
-    final titleAndStars = Container(
+    final oweTitleAndStars = Container(
       margin: EdgeInsets.only(top: 320.0),
       child: Row(
         children: <Widget>[
@@ -61,21 +49,21 @@ class DescriptionPlace extends StatelessWidget{
           ),
 
           Row(
-            children: List.generate(5, (index) => buildStar(index)),
+            children: List.generate(5, (index) => new OwcStarsGenerator(dataStars,index,30.0)),
           ),
 
         ],
       ),
     );
 
-    final render = Column(
+    final oweRender = Column(
       children: <Widget>[
-        titleAndStars,
-        description
+        oweTitleAndStars,
+        oweDescription
       ],
     );
 
-    return render;
+    return oweRender;
   }
 
 }
