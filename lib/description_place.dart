@@ -33,6 +33,7 @@ class DescriptionPlace extends StatelessWidget{
       child: Text(
         dataDescription,
         style: TextStyle(
+          fontFamily: "Lato",
           height: 1.2,
           fontSize: 16.0
         ),
@@ -51,8 +52,9 @@ class DescriptionPlace extends StatelessWidget{
             child: Text(
               dataName,
               style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 30.0
+                fontFamily: "Lato",
+                fontWeight: FontWeight.w900,
+                fontSize: 30.0
               ),
               textAlign: TextAlign.left,
             ),
