@@ -25,8 +25,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hola mundo"),
         ),
-        body: Center(
-          child: Text("Hola mundo clase 14"),
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Image.network(
+                "https://picsum.photos/500/300/?image=1070",
+                color: Colors.teal,
+                colorBlendMode: BlendMode.multiply,
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
+                child: Text.rich(
+                  TextSpan(
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia scelerisque efficitur. Proin vitae vehicula lorem. Donec suscipit libero sed tincidunt hendrerit.",
+                    style: TextStyle(
+                        height: 1.3,
+                        color: Colors.black54,
+                        fontSize: 14.5
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
+                  textDirection: TextDirection.ltr,
+                ),
+              ),
+            ],
         ),
       ),
     );
