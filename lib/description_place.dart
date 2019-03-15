@@ -32,25 +32,33 @@ class OwcDescriptionPlace extends StatelessWidget{
       margin: EdgeInsets.only(top: 320.0),
       child: Row(
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(
-                left: 20.0,
-                right: 20.0
-            ),
-            child: Text(
-              dataName,
-              style: TextStyle(
-                fontFamily: "Lato",
-                fontWeight: FontWeight.w900,
-                fontSize: 30.0
+          Flexible(
+            child: Container(
+              margin: EdgeInsets.only(
+                  left: 20.0,
+                  right: 20.0
               ),
-              textAlign: TextAlign.left,
+              child: Text(
+                dataName,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontFamily: "Lato",
+                    fontWeight: FontWeight.w900,
+                    fontSize: 30.0
+                ),
+                textAlign: TextAlign.left,
+              ),
             ),
           ),
 
-          Row(
-            children: List.generate(5, (index) => OwcStarsGenerator(dataStars,index,30.0)),
-          ),
+          Container(
+            margin: EdgeInsets.only(
+              right: 20.0,
+            ),
+            child: Row(
+              children: List.generate(5, (index) => OwcStarsGenerator(dataStars,index,30.0)),
+            ),
+          )
 
         ],
       ),

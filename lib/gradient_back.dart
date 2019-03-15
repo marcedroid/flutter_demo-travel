@@ -19,6 +19,18 @@ class OwcGradientBack extends StatelessWidget{
           tileMode: TileMode.clamp
         )
       ),
+
+      child: Text(
+        "Popular",
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: "Lato",
+          fontSize: 30.0,
+          fontWeight: FontWeight.w900
+        ),
+      ),
+
+      alignment: Alignment(-0.8, -0.35),
     );
 
     return render;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
+import 'card_image.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.blue
       ),
       home: Scaffold(
         //appBar: AppBar(title: Text("Flutter")),
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             ListView(
               children: <Widget>[
-                OwcDescriptionPlace("Duwili Ella",4.5,dataDescription),
+                OwcDescriptionPlace("Duwili Ella de fild feef",4.5,dataDescription),
                 OwcReviewList()
               ],
             ),
 
-            OwcGradientBack()
+            OwcGradientBack(),
+            OwcCardImage()
           ],
         )
       ),
