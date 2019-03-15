@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'stars_generator.dart';
+import 'custom_button.dart';
 
 class OwcDescriptionPlace extends StatelessWidget{
 
@@ -65,9 +66,11 @@ class OwcDescriptionPlace extends StatelessWidget{
     );
 
     final oweRender = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         oweTitleAndStars,
-        oweDescription
+        oweDescription,
+        OwcCustomButton()
       ],
     );
 
