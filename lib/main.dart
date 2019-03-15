@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
-import 'gradient_back.dart';
-import 'card_image.dart';
+import 'header.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,8 +27,7 @@ class MyApp extends StatelessWidget {
               ],
             ),
 
-            OwcGradientBack(),
-            OwcCardImage()
+            OwcHeader()
           ],
         )
       ),

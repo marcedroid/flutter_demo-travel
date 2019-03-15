@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 
 class OwcCardImage extends StatelessWidget{
 
+  final String dataImagePath;
+  OwcCardImage(this.dataImagePath);
+
   @override
   Widget build(BuildContext context) {
 
-    final cardImage = Container(
-      width: 300.0,
+    final oweCardImage = Container(
+      width: 270.0,
       height: 220.0,
       margin: EdgeInsets.only(
-        top: 120.0,
         left: 20.0
       ),
       decoration: BoxDecoration(
@@ -22,13 +24,13 @@ class OwcCardImage extends StatelessWidget{
           )
         ],
         image: DecorationImage(
-          image: AssetImage("assets/images/photos/photo-2.jpg"),
+          image: AssetImage(dataImagePath),
           fit: BoxFit.cover
         )
       ),
     );
 
-    return cardImage;
+    return oweCardImage;
   }
 
 }
