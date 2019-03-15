@@ -49,7 +49,7 @@ class OwcDescriptionPlace extends StatelessWidget{
           ),
 
           Row(
-            children: List.generate(5, (index) => new OwcStarsGenerator(dataStars,index,30.0)),
+            children: List.generate(5, (index) => OwcStarsGenerator(dataStars,index,30.0)),
           ),
 
         ],

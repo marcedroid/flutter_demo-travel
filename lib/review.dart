@@ -48,7 +48,7 @@ class OwcReview extends StatelessWidget{
           ),
 
           Row(
-            children: List.generate(5, (index) => new OwcStarsGenerator(dataStars,index,15.0)),
+            children: List.generate(5, (index) => OwcStarsGenerator(dataStars,index,15.0)),
           )
         ],
       )
