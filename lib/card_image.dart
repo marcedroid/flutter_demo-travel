@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'heartButton.dart';
 
 class OwcCardImage extends StatelessWidget{
 
@@ -30,7 +31,13 @@ class OwcCardImage extends StatelessWidget{
       ),
     );
 
-    return oweCardImage;
+    return Stack(
+      alignment: Alignment(0.9, 1.2),
+      children: <Widget>[
+        oweCardImage,
+        OwcHeartButton()
+      ],
+    );
   }
 
 }
