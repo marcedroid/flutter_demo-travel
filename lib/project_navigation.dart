@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:demo_travel/views/home/home_view.dart';
+import 'package:demo_travel/views/search/search_view.dart';
+import 'package:demo_travel/views/profile/profile_view.dart';
 
 class ProjectNavigation extends StatefulWidget {
 
@@ -11,19 +14,37 @@ class ProjectNavigation extends StatefulWidget {
 
 class _ProjectNavigation extends State<ProjectNavigation> {
 
+  int navigationIndex = 0;
+
+  static final List<Widget> navigationWidget = [
+    HomeView(),
+    SearchView(),
+    ProfileView()
+  ];
+
+  void changeView (int index){
+    setState(() {
+      navigationIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Theme(
-        data: Theme.of(context).copyWith(
+      appBar: null,
+      body: navigationWidget[navigationIndex],
+      bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
           canvasColor: Colors.white,
           primaryColor: Colors.purple
         ),
         child: BottomNavigationBar(
+          currentIndex: navigationIndex,
+          onTap: changeView,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: Container(height: 0.0)
+              title: Container(height: 0.0),
             ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.search),

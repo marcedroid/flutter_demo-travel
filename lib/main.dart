@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:demo_travel/views/home/main_view.dart';
 import 'project_navigation.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  debugPaintSizeEnabled=false;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Travel',
       theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: Scaffold(
-        //appBar: AppBar(title: Text("Flutter")),
-        appBar: null,
-        body: ProjectNavigation()
-      ),
+      home: ProjectNavigation()
     );
   }
 
