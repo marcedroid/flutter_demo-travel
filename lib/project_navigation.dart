@@ -33,29 +33,24 @@ class _ProjectNavigation extends State<ProjectNavigation> {
     return Scaffold(
       appBar: null,
       body: navigationWidget[navigationIndex],
-      bottomNavigationBar: Theme(
-          data: Theme.of(context).copyWith(
-          canvasColor: Colors.white,
-          primaryColor: Colors.purple
-        ),
-        child: BottomNavigationBar(
-          currentIndex: navigationIndex,
-          onTap: changeView,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Container(height: 0.0),
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                title: Container(height: 0.0)
-            ),
-            BottomNavigationBarItem(
+      bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Colors.purple,
+        currentIndex: navigationIndex,
+        onTap: changeView,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Container(height: 0.0),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              title: Container(height: 0.0)
+          ),
+          BottomNavigationBarItem(
               icon: Icon(Icons.person),
               title: Container(height: 0.0)
-            )
-          ]
-        )
+          )
+        ]
       ),
     );
   }

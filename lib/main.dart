@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'project_navigation.dart';
 import 'package:flutter/rendering.dart';
+import 'project_navigation_cupertino.dart';
 
 void main(){
   debugPaintSizeEnabled=false;
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: ProjectNavigation()
+      home: ProjectNavigationCupertino()
     );
   }
 
