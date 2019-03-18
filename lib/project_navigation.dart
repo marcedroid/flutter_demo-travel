@@ -34,7 +34,7 @@ class _ProjectNavigation extends State<ProjectNavigation> {
       appBar: null,
       body: navigationWidget[navigationIndex],
       bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.purple,
+        fixedColor: Colors.indigo,
         currentIndex: navigationIndex,
         onTap: changeView,
         items: [
