@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'card_image.dart';
+import 'package:demo_travel/views/home/card_image.dart';
 
 class OwcCardImageList extends StatelessWidget{
 

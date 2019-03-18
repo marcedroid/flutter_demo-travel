@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'stars_generator.dart';
+import 'package:demo_travel/stars_generator.dart';
 
 class OwcReview extends StatelessWidget{
 

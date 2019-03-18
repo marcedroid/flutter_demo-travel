@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'header.dart';
+import 'package:demo_travel/views/home/main_view.dart';
+import 'project_navigation.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  String dataDescription = "Vivamus pharetra metus non nulla iaculis cursus. Integer eleifend, massa sit amet rutrum venenatis, purus ex venenatis dui, vel congue enim arcu convallis nunc.\n\nPraesent non sem in dui accumsan rutrum. Nulla molestie neque quis ex semper, et commodo est suscipit.";
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +18,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         //appBar: AppBar(title: Text("Flutter")),
         appBar: null,
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                OwcDescriptionPlace("Duwili Ella de fild feef",4.5,dataDescription),
-                OwcReviewList()
-              ],
-            ),
-
-            OwcHeader()
-          ],
-        )
+        body: ProjectNavigation()
       ),
     );
   }
+
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'stars_generator.dart';
-import 'custom_button.dart';
+import 'package:demo_travel/stars_generator.dart';
+import 'package:demo_travel/views/home/custom_button.dart';
 
 class OwcDescriptionPlace extends StatelessWidget{
 

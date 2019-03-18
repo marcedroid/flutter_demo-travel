@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'review.dart';
+import 'package:demo_travel/views/home/review.dart';
 
 class OwcReviewList extends StatelessWidget{
   @override
