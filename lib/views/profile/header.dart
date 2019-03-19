@@ -2,21 +2,6 @@ import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
 
-  Widget oweGradient = Container(
-    height: 420.0,
-    decoration: BoxDecoration(
-        gradient: RadialGradient(
-            colors: [
-              Color(0xFF4f57d3),
-              Color(0xFF4f63d4),
-            ],
-            radius: 0.9,
-            stops: [0.99, 1.0],
-            center: Alignment(1.3, 0.5)
-        )
-    ),
-  );
-
   Widget oweProfileTxt = Container(
     margin: EdgeInsets.only(
       top: 70.0,
@@ -156,18 +141,17 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        oweGradient,
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            oweProfileTxt,
-            oweProfileData,
-            oweButtons
-          ],
-        )
-      ],
+
+    return Container(
+      margin: EdgeInsets.only(bottom: 40.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          oweProfileTxt,
+          oweProfileData,
+          oweButtons
+        ],
+      ),
     );
   }
 
